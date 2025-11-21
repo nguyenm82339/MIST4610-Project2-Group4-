@@ -114,7 +114,7 @@ Our data model contains **13 entities** (within the required 10–15 range):
 | Column Name | Data Type | Size  | Format | Description                     | Key?              |
 | ----------- | --------- | ----- | ------ | ------------------------------- | ----------------- |
 | FeedbackID  | INT       | NN    |        | Identifier for feedback entry   | **PK**            |
-| CustomerID  | INT       | NN    |        | Customer who gave feedback      | **FK – 
+| CustomerID  | INT       | NN    |        | Customer who gave feedback      | **FK** 
 | Comments    | VARCHAR   | 1000  |        | Opionions given by customers    |
 | Rating      | DECIMAL   | (2,1) |        | Score given by customers        |
 
