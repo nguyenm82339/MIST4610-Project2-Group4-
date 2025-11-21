@@ -89,6 +89,8 @@ Our data model contains **13 entities** (within the required 10–15 range):
 
  **Data Dictionary:**
 
+ **Customer**
+
 | Column Name | Data Type | Size | Format     | Description                         | Key?   |
 | ----------- | --------- | ---- | ---------- | ----------------------------------- | ------ |
 | CustomerID  | INT       | NN   |            | Unique identifier for each customer | **PK** |
@@ -105,16 +107,16 @@ Our data model contains **13 entities** (within the required 10–15 range):
 | ReservationsID | INT       | NN   |                     | Identifier for each reservation   | **PK**            |
 | CustomerID     | INT       | NN   |                     | Customer who made the reservation | **FK – Customer** |
 | TableID        | INT       | NN   |                     | Table that was reserved           | **FK – Table**    |
-| Date           | DATE      |      | YYYY-MM-DD HH:MM:SS | Date and time of reservation      |                   |
+| Date           | DATE      |      | YYYY-MM-DD HH:MM:SS | Date and time of reservation      | Time           | VARCHAR   | 45   |                     | Time of the reservation           |  
 
 **Feedback**
 
 | Column Name | Data Type | Size  | Format | Description                     | Key?              |
 | ----------- | --------- | ----- | ------ | ------------------------------- | ----------------- |
 | FeedbackID  | INT       | NN    |        | Identifier for feedback entry   | **PK**            |
-| CustomerID  | INT       | NN    |        | Customer who gave feedback      | **FK – Customer** |
-| Comments    | VARCHAR   | 1000  |        | Written comments from customers |                   |
-| Rating      | DECIMAL   | (2,1) |        | Score given by customer         |                   |
+| CustomerID  | INT       | NN    |        | Customer who gave feedback      | **FK – 
+| Comments    | VARCHAR   | 1000  |        | Opionions given by customers    |
+| Rating      | DECIMAL   | (2,1) |        | Score given by customers        |
 
 **Table**
 
@@ -215,6 +217,12 @@ Our data model contains **13 entities** (within the required 10–15 range):
 | ShiftsID    | INT       | NN   |        | Identifier for each shift  | **PK**            |
 | EmployeeID  | INT       | NN   |        | Employee working the shift | **FK – Employee** |
 
+**Ingredients_has_MenuItems**
+
+| Column Name | Data Type | Size | Format | Description                | Key?              |
+| ----------- | --------- | ---- | ------ | -------------------------- | ----------------- |
+| Ingredients_IngredientsID    | INT       | NN   |        | Identifys the ingreidents  | **FK**            |
+| MenuItems_MenuItemID  | INT       | NN   |        | Identifys the menu item | **FK** |
 
 
 
