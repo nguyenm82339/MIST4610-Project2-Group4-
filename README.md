@@ -32,7 +32,7 @@ This restaurant database helps manage everyday operations, including customers, 
 
 ## Data Model
 
-Our data model contains **13 entities** (within the required 10–15 range):
+Our data model contains **15 entities** (within the required 10–15 range):
 
 - `Customer`
 - `Reservations`
@@ -48,6 +48,7 @@ Our data model contains **13 entities** (within the required 10–15 range):
 - `Shifts`
 - `Payments`
 - `Feedback`
+- `Ingredients_has_MenuItems`
 
 
    **Data Model Image:**
@@ -86,6 +87,9 @@ Our data model contains **13 entities** (within the required 10–15 range):
 
 `Feedback:` Captures customer feedback about their visit, including ratings and comments related to orders or employees.
 
+`Ingredients_has_MenuItems` entity serves as an associative table that defines the many-to-many relationship between menu items and the ingredients required to prepare them
+
+
 
  **Data Dictionary:**
 
@@ -107,7 +111,8 @@ Our data model contains **13 entities** (within the required 10–15 range):
 | ReservationsID | INT       | NN   |                     | Identifier for each reservation   | **PK**            |
 | CustomerID     | INT       | NN   |                     | Customer who made the reservation | **FK** |
 | TableID        | INT       | NN   |                     | Table that was reserved           | **FK**    |
-| Date           | DATE      |      | YYYY-MM-DD HH:MM:SS | Date and time of reservation      | Time           | VARCHAR   | 45   |                     | Time of the reservation           |  
+| Date           | DATE      |      | YYYY-MM-DD HH:MM:SS | Date and time of reservation      | 
+| Time           | VARCHAR   | 45   |                     | Time of the reservation           |  
 
 **Feedback**
 
@@ -143,8 +148,6 @@ Our data model contains **13 entities** (within the required 10–15 range):
 | Name                      | VARCHAR   | 45   |        | Name of the food/beverage item                     |                      |
 | Category                  | VARCHAR   | 45   |        | Menu category (Entrée, Appetizer, etc.)            |                      |
 | Price                     | DECIMAL   | 10,2 |        | Price of the menu item                             |                      |
-| IngredientID              | VARCHAR   | 45   |        | Ingredient reference (unused or mis-modeled field) |                      |
-| Ingredients_IngredientsID | INT       | NN   |        | Ingredient used in the item                        | **FK** |
 
 
 **Ingredients**
