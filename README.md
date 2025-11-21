@@ -50,7 +50,10 @@ Our data model contains **13 entities** (within the required 10–15 range):
 - `Feedback`
 
 
-   **Data Model Image:**  
+   **Data Model Image:**
+
+  <img width="979" height="607" alt="image" src="https://github.com/user-attachments/assets/31d50a7e-235e-4646-a16f-79a79fed96ff" />
+
 
 
 ## Description
