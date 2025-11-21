@@ -105,8 +105,8 @@ Our data model contains **13 entities** (within the required 10–15 range):
 | Column Name    | Data Type | Size | Format              | Description                       | Key?              |
 | -------------- | --------- | ---- | ------------------- | --------------------------------- | ----------------- |
 | ReservationsID | INT       | NN   |                     | Identifier for each reservation   | **PK**            |
-| CustomerID     | INT       | NN   |                     | Customer who made the reservation | **FK – Customer** |
-| TableID        | INT       | NN   |                     | Table that was reserved           | **FK – Table**    |
+| CustomerID     | INT       | NN   |                     | Customer who made the reservation | **FK** |
+| TableID        | INT       | NN   |                     | Table that was reserved           | **FK**    |
 | Date           | DATE      |      | YYYY-MM-DD HH:MM:SS | Date and time of reservation      | Time           | VARCHAR   | 45   |                     | Time of the reservation           |  
 
 **Feedback**
@@ -132,7 +132,7 @@ Our data model contains **13 entities** (within the required 10–15 range):
 | Column Name | Data Type | Size | Format | Description                   | Key?              |
 | ----------- | --------- | ---- | ------ | ----------------------------- | ----------------- |
 | OrderID     | INT       | NN   |        | Identifier for each order     | **PK**            |
-| CustomerID  | INT       | NN   |        | Customer who placed the order | **FK – Customer** |
+| CustomerID  | INT       | NN   |        | Customer who placed the order | **FK** |
 
 
 **MenuItems**
@@ -144,7 +144,7 @@ Our data model contains **13 entities** (within the required 10–15 range):
 | Category                  | VARCHAR   | 45   |        | Menu category (Entrée, Appetizer, etc.)            |                      |
 | Price                     | DECIMAL   | 10,2 |        | Price of the menu item                             |                      |
 | IngredientID              | VARCHAR   | 45   |        | Ingredient reference (unused or mis-modeled field) |                      |
-| Ingredients_IngredientsID | INT       | NN   |        | Ingredient used in the item                        | **FK – Ingredients** |
+| Ingredients_IngredientsID | INT       | NN   |        | Ingredient used in the item                        | **FK** |
 
 
 **Ingredients**
@@ -172,16 +172,16 @@ Our data model contains **13 entities** (within the required 10–15 range):
 | Column Name   | Data Type | Size | Format | Description                   | Key?                 |
 | ------------- | --------- | ---- | ------ | ----------------------------- | -------------------- |
 | InventoryID   | INT       | NN   |        | Identifier for inventory item | **PK**               |
-| IngredientsID | INT       | NN   |        | Ingredient stocked            | **FK – Ingredients** |
-| SupplierID    | INT       | NN   |        | Supplier who provides item    | **FK – Supplier**    |
+| IngredientsID | INT       | NN   |        | Ingredient stocked            | **FK** |
+| SupplierID    | INT       | NN   |        | Supplier who provides item    | **FK**    |
 
 
 **Supplier_has_Inventory**
 
 | Column Name           | Data Type | Size | Format | Description               | Key?               |
 | --------------------- | --------- | ---- | ------ | ------------------------- | ------------------ |
-| Supplier_SupplierID   | INT       | NN   |        | Supplier identifier       | **FK – Supplier**  |
-| Inventory_InventoryID | INT       | NN   |        | Inventory item identifier | **FK – Inventory** |
+| Supplier_SupplierID   | INT       | NN   |        | Supplier identifier       | **FK**  |
+| Inventory_InventoryID | INT       | NN   |        | Inventory item identifier | **FK** |
 
 
 **Payments**
@@ -189,15 +189,15 @@ Our data model contains **13 entities** (within the required 10–15 range):
 | Column Name   | Data Type | Size | Format | Description                       | Key?           |
 | ------------- | --------- | ---- | ------ | --------------------------------- | -------------- |
 | PaymentID     | INT       | NN   |        | Identifier for payment            | **PK**         |
-| Order_OrderID | INT       | NN   |        | Order associated with the payment | **FK – Order** |
+| Order_OrderID | INT       | NN   |        | Order associated with the payment | **FK** |
 
 **OrderDetails**
 
 | Column Name          | Data Type | Size | Format | Description                       | Key?               |
 | -------------------- | --------- | ---- | ------ | --------------------------------- | ------------------ |
 | OrderDetailsID       | INT       | NN   |        | Identifier for order detail entry | **PK**             |
-| Order_OrderID        | INT       | NN   |        | Order being referenced            | **FK – Order**     |
-| MenuItems_MenuItemID | INT       | NN   |        | Menu item purchased               | **FK – MenuItems** |
+| Order_OrderID        | INT       | NN   |        | Order being referenced            | **FK**     |
+| MenuItems_MenuItemID | INT       | NN   |        | Menu item purchased               | **FK** |
 
 **Employee**
 
@@ -215,7 +215,7 @@ Our data model contains **13 entities** (within the required 10–15 range):
 | Column Name | Data Type | Size | Format | Description                | Key?              |
 | ----------- | --------- | ---- | ------ | -------------------------- | ----------------- |
 | ShiftsID    | INT       | NN   |        | Identifier for each shift  | **PK**            |
-| EmployeeID  | INT       | NN   |        | Employee working the shift | **FK – Employee** |
+| EmployeeID  | INT       | NN   |        | Employee working the shift | **FK** |
 
 **Ingredients_has_MenuItems**
 
