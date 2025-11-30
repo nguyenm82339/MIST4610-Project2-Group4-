@@ -230,6 +230,9 @@ Our data model contains **15 entities** (within the required 10–15 range):
 
 # Queries
 
+<img width="631" height="306" alt="image" src="https://github.com/user-attachments/assets/f0066b5f-518b-4ff5-bac3-a31e9e8b9a83" />
+
+
 Query 1: This query shows us how many reservations each “spot” in the restaurant gets and also adds a final row that shows the grand total of reservations for all the locations. This will allow managers to quickly figure out which locations within the restaurant need to be improved, whether with better lighting or decoration to attract more customers there. Managers can also continue maintaining the most popular areas the way they are not to deteriorate current customers to those spots.
 
 <img width="628" height="431" alt="Screenshot 2025-11-30 at 4 45 09 PM" src="https://github.com/user-attachments/assets/a3e367a6-0ed4-4f72-ad94-98a20d17bcb1" />
@@ -260,7 +263,6 @@ Query 5:  This query allows us to collect the different positions among the firm
 <img width="738" height="387" alt="image" src="https://github.com/user-attachments/assets/f9c1898b-47c3-4065-93d0-54ff723f061d" />
 
 Purpose: This visual highlights the total spending by each customer. 
-![Uploading Screenshot 2025-11-30 at 4.46.58 PM.png…]()
 
 Relevance: Managers can identify high-value customers and guide loyalty strategies around them.
 
